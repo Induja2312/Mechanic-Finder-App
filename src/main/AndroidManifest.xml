@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fin">
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/Theme.Fin"
+        android:label="Mechanic Finder"
+        android:icon="@mipmap/ic_launcher">
+
+        <!-- LoginActivity (First screen of the app) -->
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Activity -->
+        <activity android:name=".MainActivity"
+            android:exported="true" />
+        <activity android:name=".FindMechanicActivity"
+            android:exported="true"/>
+
+        <!-- Mechanic List Activity -->
+        <activity android:name=".MechanicListActivity"
+            android:exported="true" />
+        <activity android:name=".MechanicDetailsActivity" />
+
+        <!-- Appointment Booking Activity -->
+        <activity android:name=".BookAppointmentActivity"
+            android:exported="true" />
+
+        <!-- BaseActivity (used for common toolbar setup, does not need to be exported) -->
+        <activity android:name=".BaseActivity" />
+
+    </application>
+</manifest>
